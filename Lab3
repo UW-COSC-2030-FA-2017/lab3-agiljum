@@ -110,7 +110,7 @@ int main()
 	float n5;
 	float sum3 = 0;
 
-	cout << "What number to sum the inverse of? Or input 0 to move on :";
+	cout << "What number to sum the inverse of? Or input 0 to move on : ";
 	cin >> n5;
 
 	while (n5 != 0)
@@ -122,7 +122,7 @@ int main()
 
 		cout << "The sum of inverses is " << sum3 << endl << endl;
 
-		cout << "What number to sum the inverse of? Or input 0 to move on :";
+		cout << "What number to sum the inverse of? Or input 0 to move on : ";
 		cin >> n5;
 		sum3 = 0;
 	}
