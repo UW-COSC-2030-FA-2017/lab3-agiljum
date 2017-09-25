@@ -1,0 +1,146 @@
+// Ana Giljum
+// Sept. 25, 2017
+// COSC2030
+// Lab 3
+
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+
+int main()
+{
+	//Sum up n numbers using short
+	short n1;
+	short sum1 = 0;
+
+	cout << "Sum up to what number? Or input 0 to move on (short) ";
+	cin >> n1;
+
+	while (n1 != 0)
+	{
+		for (short i = 0; i <= n1; i++)
+		{
+			sum1 = sum1 + i;
+		}
+
+		cout << "The (short) sum is " << sum1 << endl << endl;
+
+		cout << "Sum up to what number? Or input 0 to move on (short) ";
+		cin >> n1;
+		sum1 = 0;
+	}
+	cout << endl;
+	//For short, the overflow error occurs at 256.
+	//A negative number is returned
+
+	//Sum up n numbers using long
+	long n2;
+	long sum2 = 0;
+
+	cout << "Sum up to what number? Or input 0 to move on (long) ";
+	cin >> n2;
+
+	while (n2 != 0)
+	{
+		for (long i = 0; i <= n2; i++)
+		{
+			sum2 = sum2 + i;
+		}
+
+		cout << "The (long) sum is " << sum2 << endl << endl;
+
+		cout << "Sum up to what number? Or input 0 to move on (long) ";
+		cin >> n2;
+		sum2 = 0;
+	}
+	cout << endl;
+	//For long, the overflow error occurs at 65536
+	//A negative number is returned
+
+	//Find the factorial of n using a float product
+	long n3;
+	float product1 = 1;
+
+	cout << "What number to factorial? Or input 0 to move on (long) ";
+	cin >> n3;
+
+	while (n3 != 0)
+	{
+		for (long i = 1; i <= n3; i++)
+		{
+			product1 = product1 * i;
+		}
+
+		cout << "The product is " << product1 << endl << endl;
+
+		cout << "What number to factorial? Or input 0 to move on (float) ";
+		cin >> n3;
+		product1 = 1;
+	}
+	cout << endl;
+	//For long, the overflow error is at 35
+	//inf is returned
+
+	//Find the factorial of n using a double product
+	long n4;
+	double product2 = 1;
+
+	cout << "What number to factorial? Or input 0 to move on (double) ";
+	cin >> n4;
+
+	while (n4 != 0)
+	{
+		for (long i = 1; i <= n4; i++)
+		{
+			product2 = product2 * i;
+		}
+
+		cout << "The product is " << product2 << endl << endl;
+
+		cout << "What number to factorial? Or input 0 to move on (long) ";
+		cin >> n4;
+		product2 = 1;
+	}
+	cout << endl;
+	//For double, the overflow error is at 171
+	//inf is returned
+
+	//Sum the inverse of n n times using float and double
+	float n5;
+	float sum3 = 0;
+
+	cout << "What number to sum the inverse of? Or input 0 to move on :";
+	cin >> n5;
+
+	while (n5 != 0)
+	{
+		for (float i = 1; i <= n5; i++)
+		{
+			sum3 = sum3 + (1 / n5);
+		}
+
+		cout << "The sum of inverses is " << sum3 << endl << endl;
+
+		cout << "What number to sum the inverse of? Or input 0 to move on :";
+		cin >> n5;
+		sum3 = 0;
+	}
+	cout << endl;
+	//The expected value is 1, because you are adding (1/n) n times
+	//For float, the sum comes to a little above 1 (because of overflow)
+	//For double, the sum consistently comes out to 1, until it doesn't give an answer at all
+
+	for (double i = 3.4; i < 4.4; i += 0.2)
+	{
+		cout << "i = " << i << endl;
+	}
+	//It should not execute when i = 4.4 (but it does) because of overflow. 
+	//Though it doesn't look like it, i is still less than 4.4
+	//Even though it prints "i = 4.4"
+
+	//When changed to double, "i = 4.4" does not print,
+	//because double is more precise than float
+
+	return 0;
+}
