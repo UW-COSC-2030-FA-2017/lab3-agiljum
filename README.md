@@ -1,5 +1,3 @@
-# blank
-blank-repository-shell
 
 Ana Giljum
 COSC2030
